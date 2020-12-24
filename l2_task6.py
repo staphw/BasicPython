@@ -33,7 +33,7 @@ Select: """)
         for item in wares:
             for key, value in item[1].items():
                 analysis_result[key].append(value)
-            analysis_result['units'] = list(set(analysis_result['units']))
+                analysis_result[key] = list(set(analysis_result[key]))
         print(analysis_result)
 
     elif choice == '0':
