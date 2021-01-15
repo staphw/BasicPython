@@ -8,11 +8,9 @@
 def main():
     with open('text_6.txt', encoding='utf-8') as in_file:
         lessons_dict = {line.split(" ")[0][:-1]: line.split(" ")[1:] for line in in_file.readlines()}
-        # print(lessons_dict)
+        print(lessons_dict)
     for key, value in lessons_dict.items():
-        sum_hours = 0
-        for num in value:
-            sum_hours += int(num[:num.find('(')]) if num.find('(') != -1 else 0
+        sum_hours = sum([int(num[:num.find('(')]) for num in value if num.find('(') != -1])
         lessons_dict[key] = sum_hours
     print(lessons_dict)
 
