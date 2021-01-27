@@ -18,6 +18,8 @@ class Clothes(ABC):
     def fabric_expense(self):
         pass
 
+    def __add__(self, other):
+        return self.fabric_expense + other.fabric_expense
 
 class Coat(Clothes):
     def __init__(self, size):
@@ -42,6 +44,7 @@ def main():
     print(coat.fabric_expense)
     suit = Suit(2)
     print(suit.fabric_expense)
+    print(suit + coat)
 
 if __name__ == '__main__':
     main()
