@@ -84,7 +84,6 @@ class Device(ABC):
         return 'Устройство {}, номер {}, ответственный {}.'.format(self._brand, self._serial, self._owner)
 
     def get_info(self):
-        print(self._brand, self._owner, self._serial)
         return {'Модель': self._brand, 'Ответственный': self._owner, 'Инвентарный номер': self._serial}
 
     def change_owner(self, owner='зав.складом'):
