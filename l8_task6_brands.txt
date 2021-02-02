@@ -1,0 +1,10 @@
+Xerox
+НР
+Canon
+Kyocera
+Konica
+Epson
+Toshiba
+Samsung
+Panasonic
+Lexmark
